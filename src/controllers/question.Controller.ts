@@ -1,5 +1,5 @@
 import { Question } from "../utils/types";
-import {QuestionSchema} from "../schema/question";
+import {QuestionSchema, QuestionsArraySchema} from "../schema/question";
 import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
 import { ApiError } from "../errors/apiError";
@@ -8,17 +8,17 @@ import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
 
 // Function to add question to the database
-export const addQuestionToDatabase = asyncHandler(
+export const addQuestionsToDatabase = asyncHandler(
 	async (req: Request, res: Response, next: NextFunction) => {
-		const parsedInput = QuestionSchema.safeParse(req.body);
+		const parsedInput = QuestionsArraySchema.safeParse(req.body);
 		if (!parsedInput.success) {
 			return next(new ApiError(400, parsedInput.error.message));
 		}
 
-		const question = parsedInput.data;
+		const questions = parsedInput.data;
 
 		try {
-			const insertedQuestions = await questionStoreModel.create(question);
+			await questionStoreModel.insertMany(questions);
 			res.status(201).json({
 				success: true,
 				message: "Questions added successfully",

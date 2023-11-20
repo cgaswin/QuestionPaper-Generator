@@ -1,3 +1,4 @@
+import e from 'express';
 import { z } from 'zod';
 
 const QuestionSchema = z.object({
@@ -7,6 +8,11 @@ const QuestionSchema = z.object({
     difficulty: z.string(),
     marks: z.number(),
 })
-export type Question = z.infer<typeof QuestionSchema>;
 
-export {QuestionSchema};
+const QuestionsArraySchema = z.array(QuestionSchema);
+
+
+export type Question = z.infer<typeof QuestionSchema>;
+export type QuestionsArray = z.infer<typeof QuestionsArraySchema>;
+
+export {QuestionSchema, QuestionsArraySchema};

@@ -1,3 +1,3 @@
-import { Question } from "../schema/question";
+import { Question,QuestionsArray } from "../schema/question";
 
-export { Question };
+export { Question,QuestionsArray };
