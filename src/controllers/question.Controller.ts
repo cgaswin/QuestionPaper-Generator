@@ -1,8 +1,9 @@
 import { Question } from "../utils/types";
-import { QuestionsArraySchema} from "../schema/question";
+import { QuestionsArraySchema } from "../schema/question";
 import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
-import { ApiError } from "../utils/apiError";
+import { ApiError } from "../utils/ApiError";
+import { ApiResponse } from "../utils/ApiResponse";
 import getRandomQuestions from "../utils/getRandomQuestion";
 import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
@@ -19,10 +20,9 @@ export const addQuestionsToDatabase = asyncHandler(
 
 		try {
 			await questionStoreModel.insertMany(questions);
-			res.status(201).json({
-				success: true,
-				message: "Questions added successfully",
-			});
+			res
+				.status(201)
+				.json(new ApiResponse(201, "Questions added successfully", questions));
 		} catch (error) {
 			return next(new ApiError(500, "Failed to add questions to the database"));
 		}
@@ -69,9 +69,10 @@ export const generateQuestionPaper = asyncHandler(
 			...getRandomQuestions(hardQuestionsList, hardQuestions)
 		);
 
-		res.status(200).json({
-			success: true,
-			questions: selectedQuestions,
-		})
+		res
+			.status(200)
+			.json(
+				new ApiResponse(200, "Question paper generated", selectedQuestions)
+			);
 	}
 );
