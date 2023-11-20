@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import { Question } from "../utils/types";
 import QuestionSchema from "../schema/question";
 import { asyncHandler } from "../utils/asyncHandler";
@@ -8,6 +7,27 @@ import getRandomQuestions from "../utils/getRandomQuestion";
 import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
 
+// Function to add question to the database
+export const addQuestionToDatabase = asyncHandler(
+	async (req: Request, res: Response, next: NextFunction) => {
+		const parsedInput = QuestionSchema.safeParse(req.body);
+		if (!parsedInput.success) {
+			return next(new ApiError(400, parsedInput.error.message));
+		}
+
+		const question = parsedInput.data;
+
+		try {
+			const insertedQuestions = await questionStoreModel.create(question);
+			res.status(201).json({
+				success: true,
+				message: "Questions added successfully",
+			});
+		} catch (error) {
+			return next(new ApiError(500, "Failed to add questions to the database"));
+		}
+	}
+);
 
 //function to generate question paper
 export const generateQuestionPaper = asyncHandler(
@@ -26,16 +46,16 @@ export const generateQuestionPaper = asyncHandler(
 
 		// Query the database to fetch questions based on difficulty level
 		const easyQuestionsList = await questionStoreModel
-            .find({ difficulty: "Easy" })
-            .limit(easyQuestions);
+			.find({ difficulty: "Easy" })
+			.limit(easyQuestions);
 		const mediumQuestionsList = await questionStoreModel
-            .find({
-                difficulty: "Medium",
-            })
-            .limit(mediumQuestions);
+			.find({
+				difficulty: "Medium",
+			})
+			.limit(mediumQuestions);
 		const hardQuestionsList = await questionStoreModel
-            .find({ difficulty: "Hard" })
-            .limit(hardQuestions);
+			.find({ difficulty: "Hard" })
+			.limit(hardQuestions);
 
 		// Randomly select the required number of questions from each difficulty level
 		const selectedQuestions: Question[] = [];

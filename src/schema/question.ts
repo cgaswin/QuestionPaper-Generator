@@ -8,6 +8,7 @@ const QuestionSchema = z.object({
     marks: z.number(),
 })
 
+
 export type Question = z.infer<typeof QuestionSchema>;
 
 export default QuestionSchema;
