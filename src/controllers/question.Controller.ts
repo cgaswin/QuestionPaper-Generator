@@ -1,8 +1,8 @@
 import { Question } from "../utils/types";
-import {QuestionSchema, QuestionsArraySchema} from "../schema/question";
+import { QuestionsArraySchema} from "../schema/question";
 import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
-import { ApiError } from "../errors/apiError";
+import { ApiError } from "../utils/apiError";
 import getRandomQuestions from "../utils/getRandomQuestion";
 import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
