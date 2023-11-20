@@ -1,5 +1,5 @@
 import { Question } from "./types";
-import { ApiError } from "../errors/apiError";
+import { ApiError } from "./ApiError";
 
 // Helper function to randomly select questions from a given list
 const getRandomQuestions = (
