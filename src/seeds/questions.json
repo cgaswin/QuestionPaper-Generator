@@ -1,0 +1,205 @@
+[
+	{
+		"question": "What is the difference between Java and JavaScript?",
+		"subject": "Programming",
+		"topic": "Language Comparison",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of polymorphism in object-oriented programming.",
+		"subject": "Programming",
+		"topic": "Object-Oriented Programming",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "How does a binary search algorithm work?",
+		"subject": "Algorithms",
+		"topic": "Binary Search",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'git clone' command in Git?",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of a RESTful API.",
+		"subject": "Web Development",
+		"topic": "APIs",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What is the difference between 'var', 'let', and 'const' in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "How does the 'this' keyword work in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of virtual memory in operating systems.",
+		"subject": "Operating Systems",
+		"topic": "Memory Management",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "What is the purpose of the 'npm' package manager?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "How does the 'try-catch' block work in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What is the role of the 'SQL JOIN' statement in database queries?",
+		"subject": "Databases",
+		"topic": "SQL",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of recursion in programming.",
+		"subject": "Programming",
+		"topic": "Recursion",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'map' function work in JavaScript?",
+		"subject": "Programming",
+		"topic": "Functional Programming",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'docker-compose' tool in Docker?",
+		"subject": "DevOps",
+		"topic": "Docker",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of Big O notation in algorithm analysis.",
+		"subject": "Algorithms",
+		"topic": "Algorithm Analysis",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'useState' hook work in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'finally' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of DNS (Domain Name System).",
+		"subject": "Networking",
+		"topic": "DNS",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What is the purpose of the 'useState' hook in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "How does the 'for...of' loop differ from the 'for...in' loop in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Explain the concept of garbage collection in programming languages.",
+		"subject": "Programming",
+		"topic": "Memory Management",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "What is the purpose of the 'MVC' architecture in web development?",
+		"subject": "Web Development",
+		"topic": "MVC",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of asynchronous programming in JavaScript.",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "How does the 'npm install' command work in Node.js?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'Redux' library in React applications?",
+		"subject": "Web Development",
+		"topic": "Redux",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of a linked list in data structures.",
+		"subject": "Data Structures",
+		"topic": "Linked List",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'SELECT' statement in SQL?",
+		"subject": "Databases",
+		"topic": "SQL",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of version control in software development.",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 8
+	}
+]

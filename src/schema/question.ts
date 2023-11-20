@@ -7,8 +7,6 @@ const QuestionSchema = z.object({
     difficulty: z.string(),
     marks: z.number(),
 })
-
-
 export type Question = z.infer<typeof QuestionSchema>;
 
-export default QuestionSchema;
+export {QuestionSchema};

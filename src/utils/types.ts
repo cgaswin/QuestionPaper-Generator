@@ -1,3 +1,3 @@
-import {Question} from "../schema/question";
+import { Question } from "../schema/question";
 
 export { Question };

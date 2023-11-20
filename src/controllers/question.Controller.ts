@@ -1,5 +1,5 @@
 import { Question } from "../utils/types";
-import QuestionSchema from "../schema/question";
+import {QuestionSchema} from "../schema/question";
 import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
 import { ApiError } from "../errors/apiError";
