@@ -69,6 +69,9 @@ export const generateQuestionPaper = asyncHandler(
 			...getRandomQuestions(hardQuestionsList, hardQuestions)
 		);
 
-		return selectedQuestions;
+		res.status(200).json({
+			success: true,
+			questions: selectedQuestions,
+		})
 	}
 );

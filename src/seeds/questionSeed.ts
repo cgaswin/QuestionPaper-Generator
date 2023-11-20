@@ -1,7 +1,6 @@
 import questionStoreModel from "../models/questionStore.model";
 import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
-import { ApiError } from "../errors/apiError";
 import questions from "../seeds/questions.json"
 
 //add questions to databse
@@ -17,3 +16,6 @@ const seedQuestions = asyncHandler(async (req: Request, res: Response) => {
     })
 
 })
+
+
+export {seedQuestions}

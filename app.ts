@@ -4,6 +4,7 @@ import cors, { CorsOptions } from "cors";
 import helmet from "helmet";
 import rateLimit, { RateLimitRequestHandler } from "express-rate-limit";
 import morgan from "morgan";
+import { seedQuestions } from "./src/seeds/questionSeed";
 
 dotenv.config();
 
@@ -31,6 +32,15 @@ const limiter: RateLimitRequestHandler = rateLimit({
 });
 
 app.use("/api", limiter);
+
+//import routes
+import questionsRoute from "./src/routes/questions.route"
+
+//use routes
+app.use("/api/v1/questions", questionsRoute)
+
+//seeding 
+app.use("/api/v1/seed/questions", seedQuestions)
 
 
 export default app;
