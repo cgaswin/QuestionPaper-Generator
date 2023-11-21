@@ -1,0 +1,306 @@
+openapi: 3.0.0
+info:
+  title: QuestionPaper Generator
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000/api/v1
+    description: Local server
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: healthCheck
+      responses:
+        "200":
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /seed/questions:
+    post:
+      summary: Seed questions to database
+      operationId: seedQuestions
+      responses:
+        "201":
+          description: Questions seeded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+  /questions/add:
+    post:
+      summary: Add new questions to the database
+      description: This endpoint accepts an array of question objects in the request body and adds them to the database. It returns the added questions in the response.
+      operationId: addQuestionsToDatabase
+      requestBody:
+        description: The questions to add
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  question:
+                    type: string
+                    description: The text of the question.
+                  subject:
+                    type: string
+                    description: The subject of the question.
+                  topic:
+                    type: string
+                    description: The topic of the question.
+                  difficulty:
+                    type: string
+                    description: The difficulty level of the question. Can be 'Easy', 'Medium', or 'Hard'.
+                  marks:
+                    type: integer
+                    description: The number of marks the question is worth.
+      responses:
+        "201":
+          description: The questions were added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    description: The HTTP status code.
+                  message:
+                    type: string
+                    description: A message indicating the result of the operation.
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        question:
+                          type: string
+                          description: The text of the question.
+                        subject:
+                          type: string
+                          description: The subject of the question.
+                        topic:
+                          type: string
+                          description: The topic of the question.
+                        difficulty:
+                          type: string
+                          description: The difficulty level of the question. Can be 'Easy', 'Medium', or 'Hard'.
+                        marks:
+                          type: integer
+                          description: The number of marks the question is worth.
+      post:
+        summary: Add a new question to the database
+        description: This endpoint accepts a question object in the request body and adds it to the database. It returns the added question in the response.
+        operationId: addQuestionsToDatabase
+        requestBody:
+          description: The question to add
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  question:
+                    type: string
+                    description: The text of the question.
+                  subject:
+                    type: string
+                    description: The subject of the question.
+                  topic:
+                    type: string
+                    description: The topic of the question.
+                  difficulty:
+                    type: string
+                    description: The difficulty level of the question. Can be 'Easy', 'Medium', or 'Hard'.
+                  marks:
+                    type: integer
+                    description: The number of marks the question is worth.
+        responses:
+          "201":
+            description: The question was added successfully.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: integer
+                      description: The HTTP status code.
+                    message:
+                      type: string
+                      description: A message indicating the result of the operation.
+                    data:
+                      type: object
+                      description: The added question.
+                      properties:
+                        question:
+                          type: string
+                          description: The text of the question.
+                        subject:
+                          type: string
+                          description: The subject of the question.
+                        topic:
+                          type: string
+                          description: The topic of the question.
+                        difficulty:
+                          type: string
+                          description: The difficulty level of the question. Can be 'Easy', 'Medium', or 'Hard'.
+                        marks:
+                          type: integer
+                          description: The number of marks the question is worth.
+        post:
+          summary: Add questions to database
+          operationId: addQuestionsToDatabase
+          requestBody:
+            description: Questions to add
+            required: true
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      question:
+                        type: string
+                        description: The question text
+                      subject:
+                        type: string
+                        description: The subject of the question
+                      topic:
+                        type: string
+                        description: The topic of the question
+                      difficulty:
+                        type: string
+                        description: The difficulty level of the question
+                      marks:
+                        type: integer
+                        description: The marks for the question
+          responses:
+            "201":
+              description: Questions added successfully
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      status:
+                        type: integer
+                      message:
+                        type: string
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            question:
+                              type: string
+                              description: The question text
+                            subject:
+                              type: string
+                              description: The subject of the question
+                            topic:
+                              type: string
+                              description: The topic of the question
+                            difficulty:
+                              type: string
+                              description: The difficulty level of the question
+                            marks:
+                              type: integer
+                              description: The marks for the question
+  /questions/generate:
+    post:
+      summary: Generate question paper
+      description: This endpoint accepts total marks and a difficulty distribution in the request body and generates a question paper accordingly. It returns the generated question paper in the response.
+      operationId: generateQuestionPaper
+      requestBody:
+        description: Total marks and difficulty distribution
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                totalMarks:
+                  type: integer
+                  description: The total marks for the question paper.
+                difficultyDistribution:
+                  type: object
+                  description: The distribution of difficulty levels for the questions in the paper. It's an object with 'Easy', 'Medium', and 'Hard' keys and integer values.
+                  properties:
+                    Easy:
+                      type: integer
+                      description: The number of easy questions.
+                    Medium:
+                      type: integer
+                      description: The number of medium questions.
+                    Hard:
+                      type: integer
+                      description: The number of hard questions.
+      responses:
+        "200":
+          description: Question paper generated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    description: The HTTP status code.
+                  message:
+                    type: string
+                    description: A message indicating the result of the operation.
+                  data:
+                    type: object
+                    description: The generated question paper.
+                    properties:
+                      totalMarks:
+                        type: integer
+                        description: The total marks of the generated question paper.
+                      totalQuestions:
+                        type: object
+                        description: The total number of questions in the paper, broken down by difficulty level.
+                        properties:
+                          easy:
+                            type: integer
+                            description: The number of easy questions.
+                          medium:
+                            type: integer
+                            description: The number of medium questions.
+                          hard:
+                            type: integer
+                            description: The number of hard questions.
+                      questions:
+                        type: array
+                        description: The questions in the paper.
+                        items:
+                          type: object
+                          properties:
+                            question:
+                              type: string
+                              description: The question text
+                            subject:
+                              type: string
+                              description: The subject of the question
+                            topic:
+                              type: string
+                              description: The topic of the question
+                            difficulty:
+                              type: string
+                              description: The difficulty level of the question
+                            marks:
+                              type: integer
+                              description: The marks for the question
