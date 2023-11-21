@@ -4,9 +4,19 @@ import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
 import { ApiError } from "../utils/ApiError";
 import { ApiResponse } from "../utils/ApiResponse";
-import getRandomQuestions from "../utils/getRandomQuestion";
+import getRandomQuestions from "../utils/getQuestions";
 import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
+
+interface Data {
+	totalMarks: number;
+	totalQuestions: {
+		easy: number;
+		medium: number;
+		hard: number;
+	};
+	questions: Question[];
+}
 
 // Function to add question to the database
 export const addQuestionsToDatabase = asyncHandler(
@@ -37,42 +47,75 @@ export const generateQuestionPaper = asyncHandler(
 			return next(new ApiError(400, parsedInput.error.message));
 		}
 		const { totalMarks, difficultyDistribution } = parsedInput.data;
-		const { easy, medium, hard } = difficultyDistribution;
+		const { Easy, Medium, Hard } = difficultyDistribution;
+		if (Easy + Medium + Hard !== 100) {
+			return next(
+				new ApiError(400, "Sum of easy, medium and hard should be 100")
+			);
+		}
 
-		// Calculate the number of questions for each difficulty level
-		const easyQuestions = Math.round(totalMarks * (easy / 100));
-		const mediumQuestions = Math.round(totalMarks * (medium / 100));
-		const hardQuestions = Math.round(totalMarks * (hard / 100));
+		const easyQuestions: Question[] = await questionStoreModel.find({
+			difficulty: "Easy",
+		});
+		const mediumQuestions: Question[] = await questionStoreModel.find({
+			difficulty: "Medium",
+		});
+		const hardQuestions: Question[] = await questionStoreModel.find({
+			difficulty: "Hard",
+		});
 
-		// Query the database to fetch questions based on difficulty level
-		const easyQuestionsList = await questionStoreModel
-			.find({ difficulty: "Easy" })
-			.limit(easyQuestions);
-		const mediumQuestionsList = await questionStoreModel
-			.find({
-				difficulty: "Medium",
-			})
-			.limit(mediumQuestions);
-		const hardQuestionsList = await questionStoreModel
-			.find({ difficulty: "Hard" })
-			.limit(hardQuestions);
+		const easyQuestionPaper: Question[] = getRandomQuestions(
+			easyQuestions,
+			Easy,
+			totalMarks
+		);
+		const easyPaperLength: number = easyQuestionPaper.length;
 
-		// Randomly select the required number of questions from each difficulty level
-		const selectedQuestions: Question[] = [];
-		selectedQuestions.push(
-			...getRandomQuestions(easyQuestionsList, easyQuestions)
+		const mediumQuestionPaper: Question[] = getRandomQuestions(
+			mediumQuestions,
+			Medium,
+			totalMarks
 		);
-		selectedQuestions.push(
-			...getRandomQuestions(mediumQuestionsList, mediumQuestions)
+
+		const mediumPaperLength: number = mediumQuestionPaper.length;
+
+		const hardQuestionPaper: Question[] = getRandomQuestions(
+			hardQuestions,
+			Hard,
+			totalMarks
 		);
-		selectedQuestions.push(
-			...getRandomQuestions(hardQuestionsList, hardQuestions)
+
+		const hardPaperLength: number = hardQuestionPaper.length;
+
+		const questionPaper: Question[] = easyQuestionPaper
+			.concat(mediumQuestionPaper)
+			.concat(hardQuestionPaper);
+
+		//checking if the sum of questions in paper equals 100
+		const sum: number = questionPaper.reduce(
+			(sum, question) => sum + question.marks,
+			0
 		);
+		if (sum !== 100) {
+			return next(
+				new ApiError(500, "The sum of marks of these questions is not 100")
+			);
+		}
+
+		const data: Data = {
+			totalMarks: 100,
+			totalQuestions: {
+				easy: easyPaperLength,
+				medium: mediumPaperLength,
+				hard: hardPaperLength,
+			},
+			questions: questionPaper,
+		};
 
 		res
 			.status(200)
 			.json(
-				new ApiResponse(200, "Question paper generated", selectedQuestions)
+				new ApiResponse(200, "Question paper generated successfully", data)
 			);
 	}
 );

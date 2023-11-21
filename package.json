@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
     "build": "tsc -p ."
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "helmet": "^7.1.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
+    "morgan": "^1.10.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

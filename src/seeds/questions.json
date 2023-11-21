@@ -201,5 +201,635 @@
 		"topic": "Git",
 		"difficulty": "Medium",
 		"marks": 8
+	},
+	{
+		"question": "How does the 'fetch' API work in JavaScript for making HTTP requests?",
+		"subject": "Web Development",
+		"topic": "Fetch API",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of a binary tree in data structures.",
+		"subject": "Data Structures",
+		"topic": "Binary Tree",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'useState' hook work in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'try-catch' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of the 'Observer' pattern in software design.",
+		"subject": "Design Patterns",
+		"topic": "Observer Pattern",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'docker-compose' tool in Docker?",
+		"subject": "DevOps",
+		"topic": "Docker",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of a hash table in data structures.",
+		"subject": "Data Structures",
+		"topic": "Hash Table",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'useState' hook work in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'npm' package manager?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Explain the concept of continuous integration in software development.",
+		"subject": "DevOps",
+		"topic": "CI/CD",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "How does the 'map' function work in JavaScript?",
+		"subject": "Programming",
+		"topic": "Functional Programming",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'MVC' architecture in web development?",
+		"subject": "Web Development",
+		"topic": "MVC",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of dependency injection in software design.",
+		"subject": "Design Patterns",
+		"topic": "Dependency Injection",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'git merge' command work in Git?",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "What is the role of the 'finally' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of cloud computing and its key service models.",
+		"subject": "Cloud Computing",
+		"topic": "Basics",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'for...of' loop differ from the 'for...in' loop in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'npm install' command in Node.js?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "Explain the concept of multithreading in programming.",
+		"subject": "Programming",
+		"topic": "Concurrency",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'fetch' API work in JavaScript for making HTTP requests?",
+		"subject": "Web Development",
+		"topic": "Fetch API",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'Redux' library in React applications?",
+		"subject": "Web Development",
+		"topic": "Redux",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of a linked list in data structures.",
+		"subject": "Data Structures",
+		"topic": "Linked List",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'SELECT' statement in SQL?",
+		"subject": "Databases",
+		"topic": "SQL",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of version control in software development.",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'fetch' API work in JavaScript for making HTTP requests?",
+		"subject": "Web Development",
+		"topic": "Fetch API",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'try-catch' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of the 'Observer' pattern in software design.",
+		"subject": "Design Patterns",
+		"topic": "Observer Pattern",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'docker-compose' tool in Docker?",
+		"subject": "DevOps",
+		"topic": "Docker",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What is the difference between synchronous and asynchronous programming?",
+		"subject": "Programming",
+		"topic": "Concurrency",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of dynamic programming in algorithms.",
+		"subject": "Algorithms",
+		"topic": "Dynamic Programming",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'npm start' command work in a Node.js project?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'git branch' command in Git?",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of REST API authentication and types of authentication mechanisms.",
+		"subject": "Web Development",
+		"topic": "APIs",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'reduce' function work in JavaScript?",
+		"subject": "Programming",
+		"topic": "Functional Programming",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'try-catch-finally' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of virtualization in the context of computing infrastructure.",
+		"subject": "Infrastructure",
+		"topic": "Virtualization",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "What is the role of the 'setState' method in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "How does the 'git pull' command work in Git?",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of a binary search tree and its operations.",
+		"subject": "Data Structures",
+		"topic": "Binary Search Tree",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "What is the purpose of the 'fetch' API in modern web development?",
+		"subject": "Web Development",
+		"topic": "Fetch API",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "How does the 'useState' hook work in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "Explain the concept of responsive web design and its importance.",
+		"subject": "Web Development",
+		"topic": "Responsive Design",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What is the role of the 'try-catch' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of the 'Factory Method' design pattern.",
+		"subject": "Design Patterns",
+		"topic": "Factory Method",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'docker-compose' tool in Docker?",
+		"subject": "DevOps",
+		"topic": "Docker",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of a hash table in data structures.",
+		"subject": "Data Structures",
+		"topic": "Hash Table",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'useState' hook work in React?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the purpose of the 'try-catch' block in exception handling?",
+		"subject": "Programming",
+		"topic": "Error Handling",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of the 'Observer' pattern in software design.",
+		"subject": "Design Patterns",
+		"topic": "Observer Pattern",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'docker-compose' tool in Docker?",
+		"subject": "DevOps",
+		"topic": "Docker",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Explain the concept of a linked list in data structures.",
+		"subject": "Data Structures",
+		"topic": "Linked List",
+		"difficulty": "Hard",
+		"marks": 9
+	},
+	{
+		"question": "How does the 'async/await' syntax simplify asynchronous code in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "What is the role of the 'SELECT' statement in SQL?",
+		"subject": "Databases",
+		"topic": "SQL",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of version control in software development.",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'fetch' API work in JavaScript for making HTTP requests?",
+		"subject": "Web Development",
+		"topic": "Fetch API",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "Explain the concept of the A* algorithm and its applications.",
+		"subject": "Algorithms",
+		"topic": "A* Algorithm",
+		"difficulty": "Hard",
+		"marks": 12
+	},
+	{
+		"question": "Discuss the CAP theorem and its implications in distributed systems.",
+		"subject": "Distributed Systems",
+		"topic": "CAP Theorem",
+		"difficulty": "Hard",
+		"marks": 13
+	},
+	{
+		"question": "Implement a thread-safe singleton pattern in Java with lazy initialization.",
+		"subject": "Programming",
+		"topic": "Design Patterns",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "Explain the concept of blockchain and its role in cryptocurrencies.",
+		"subject": "Blockchain",
+		"topic": "Cryptocurrencies",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "Design a scalable and fault-tolerant distributed cache system.",
+		"subject": "Distributed Systems",
+		"topic": "Cache Systems",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "Implement a parallel merge sort algorithm using multi-threading.",
+		"subject": "Algorithms",
+		"topic": "Parallel Computing",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "Discuss the challenges and solutions in achieving eventual consistency in distributed databases.",
+		"subject": "Databases",
+		"topic": "Consistency Models",
+		"difficulty": "Hard",
+		"marks": 13
+	},
+	{
+		"question": "Design a real-time recommendation system architecture for an e-commerce platform.",
+		"subject": "System Design",
+		"topic": "Recommendation Systems",
+		"difficulty": "Hard",
+		"marks": 12
+	},
+	{
+		"question": "Explain the principles behind quantum computing and its potential impact on cryptography.",
+		"subject": "Quantum Computing",
+		"topic": "Cryptography",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "Implement a lock-free data structure for concurrent programming.",
+		"subject": "Concurrency",
+		"topic": "Lock-Free Data Structures",
+		"difficulty": "Hard",
+		"marks": 10
+	},
+	{
+		"question": "What is the purpose of HTML in web development?",
+		"subject": "Web Development",
+		"topic": "HTML",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Explain the difference between HTTP and HTTPS.",
+		"subject": "Networking",
+		"topic": "HTTP/HTTPS",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "How does a 'for' loop work in programming?",
+		"subject": "Programming",
+		"topic": "Loops",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'if' statement in programming?",
+		"subject": "Programming",
+		"topic": "Conditional Statements",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Explain the role of CSS in styling web pages.",
+		"subject": "Web Development",
+		"topic": "CSS",
+		"difficulty": "Easy",
+		"marks": 6
+	},
+	{
+		"question": "How does a binary search algorithm work?",
+		"subject": "Algorithms",
+		"topic": "Binary Search",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'git add' command in Git?",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Explain the concept of a variable in programming.",
+		"subject": "Programming",
+		"topic": "Variables",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "How does the 'querySelector' function work in JavaScript?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the purpose of the 'npm init' command in Node.js?",
+		"subject": "Web Development",
+		"topic": "Node.js",
+		"difficulty": "Easy",
+		"marks": 4
+	},
+	{
+		"question": "Explain the concept of responsive web design and provide examples of its benefits.",
+		"subject": "Web Development",
+		"topic": "Responsive Design",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Discuss the advantages and disadvantages of using a NoSQL database over a traditional relational database.",
+		"subject": "Databases",
+		"topic": "NoSQL",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "How does the 'Promise' object work in JavaScript for handling asynchronous operations?",
+		"subject": "Programming",
+		"topic": "JavaScript",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the concept of microservices architecture and its benefits in modern software development.",
+		"subject": "Software Architecture",
+		"topic": "Microservices",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Implement a simple RESTful API using a web framework of your choice and explain the key components.",
+		"subject": "Web Development",
+		"topic": "APIs",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "Discuss the principles of object-oriented programming and provide examples of its implementation in a programming language.",
+		"subject": "Programming",
+		"topic": "Object-Oriented Programming",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "What are the key differences between a stack and a queue data structure?",
+		"subject": "Data Structures",
+		"topic": "Stacks and Queues",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Explain the role of a reverse proxy in a web server architecture and provide use cases.",
+		"subject": "Networking",
+		"topic": "Reverse Proxy",
+		"difficulty": "Medium",
+		"marks": 8
+	},
+	{
+		"question": "How does the 'useState' hook work in React for managing state in functional components?",
+		"subject": "Web Development",
+		"topic": "React",
+		"difficulty": "Medium",
+		"marks": 7
+	},
+	{
+		"question": "Discuss the importance of code versioning in a collaborative software development environment.",
+		"subject": "Version Control",
+		"topic": "Git",
+		"difficulty": "Medium",
+		"marks": 7
 	}
 ]
