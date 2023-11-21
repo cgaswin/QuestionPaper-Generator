@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import express, { Application} from "express";
+import express, { Application } from "express";
 import cors, { CorsOptions } from "cors";
 import helmet from "helmet";
 import rateLimit, { RateLimitRequestHandler } from "express-rate-limit";
@@ -17,7 +17,6 @@ app.use(
 	} as CorsOptions)
 );
 
-
 app.use(helmet());
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
@@ -34,13 +33,16 @@ const limiter: RateLimitRequestHandler = rateLimit({
 app.use("/api", limiter);
 
 //import routes
-import questionsRoute from "./src/routes/questions.route"
+import questionsRouter from "./src/routes/questions.route";
+import healthCheckRouter from "./src/routes/healthCheck.route";
+
+//health check
+app.use("/api/v1/health", healthCheckRouter);
 
 //use routes
-app.use("/api/v1/questions", questionsRoute)
+app.use("/api/v1/questions", questionsRouter);
 
-//seeding 
-app.use("/api/v1/seed/questions", seedQuestions)
-
+//seeding
+app.use("/api/v1/seed/questions", seedQuestions);
 
 export default app;

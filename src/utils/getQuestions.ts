@@ -8,7 +8,7 @@ function subsetSumRecursive(
 	memo: Map<string, Question[] | null> = new Map()
 ): Question[] | null {
 	// Convert the current state to a string to use as a key in the memo map
-	const key = `${target}-${index}`;
+	const key: string = `${target}-${index}`;
 
 	// If the result of this state is in the memo map, return it
 	if (memo.has(key)) {
@@ -24,7 +24,7 @@ function subsetSumRecursive(
 	}
 
 	// Recursive case, we include the current question or exclude it
-	const include = subsetSumRecursive(
+	const include: Question[] | null = subsetSumRecursive(
 		questions,
 		target - questions[index].marks,
 		index + 1,
@@ -35,7 +35,12 @@ function subsetSumRecursive(
 		memo.set(key, include);
 		return include;
 	}
-	const exclude = subsetSumRecursive(questions, target, index + 1, memo);
+	const exclude: Question[] | null = subsetSumRecursive(
+		questions,
+		target,
+		index + 1,
+		memo
+	);
 	memo.set(key, exclude);
 	return exclude;
 }
@@ -56,8 +61,7 @@ const getRandomQuestions = (
 		(sum, question) => sum + question.marks,
 		0
 	);
-	console.log(totalMarks);
-	const marksRequired = Math.floor((percentage / 100) * target);
+	const marksRequired :number  = Math.floor((percentage / 100) * target);
 
 	if (marksRequired > totalMarks) {
 		throw new ApiError(
