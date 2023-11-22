@@ -8,6 +8,6 @@ import {
 const router: Router = Router();
 
 router.route("/add").post(addQuestionsToDatabase);
-router.route("/generate").get(generateQuestionPaper);
+router.route("/generate").post(generateQuestionPaper);
 
 export default router;
