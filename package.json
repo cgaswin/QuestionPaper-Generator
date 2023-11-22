@@ -2,7 +2,7 @@
 	"name": "questionpaper-generator",
 	"version": "1.0.0",
 	"description": "This is the assignment as part of the backend internship",
-	"main": "index.js",
+	"main": "build/index.js",
 	"scripts": {
 		"start": "node build/index.js",
 		"dev": "ts-node-dev --respawn --transpile-only  --watch ./**/*.yaml index.ts",
