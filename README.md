@@ -18,6 +18,11 @@ Install the dependencies:
 ```bash
 npm install
 ```
+Build Project:
+```bash
+npm run build
+```
+
 Run the development server:
 
 ```bash
