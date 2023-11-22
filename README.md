@@ -47,8 +47,11 @@ CORS_ORIGIN = # default *
 
 ## API Endpoints
 
+**API DOCS**:\
+`GET /api-docs` 
+
 **Health Check route**:\
-`GET api/v1/health` 
+`GET /api/v1/health` 
 
 **Question Paper Routes**:\
 `POST "/api/v1/seed/questions` - Seed Questions\
