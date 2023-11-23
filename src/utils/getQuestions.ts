@@ -46,7 +46,7 @@ function subsetSumRecursive(
 }
 
 // Helper function to randomly select questions from a given list
-const getRandomQuestions = (
+const getQuestions = (
 	questionsList: Question[],
 	percentage: number,
 	target: number
@@ -82,4 +82,4 @@ const getRandomQuestions = (
 	}
 };
 
-export default getRandomQuestions;
+export default getQuestions;

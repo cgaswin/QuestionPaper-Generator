@@ -4,7 +4,7 @@ import { asyncHandler } from "../utils/asyncHandler";
 import { Request, Response, NextFunction } from "express";
 import { ApiError } from "../utils/ApiError";
 import { ApiResponse } from "../utils/ApiResponse";
-import getRandomQuestions from "../utils/getQuestions";
+import getQuestions from "../utils/getQuestions";
 import questionStoreModel from "../models/questionStore.model";
 import QuestionRequestSchema from "../schema/questionRequest";
 
@@ -65,14 +65,14 @@ export const generateQuestionPaper = asyncHandler(
 			difficulty: "Hard",
 		});
 
-		const easyQuestionPaper: Question[] = getRandomQuestions(
+		const easyQuestionPaper: Question[] = getQuestions(
 			easyQuestions,
 			Easy,
 			totalMarks
 		);
 		const easyPaperLength: number = easyQuestionPaper.length;
 
-		const mediumQuestionPaper: Question[] = getRandomQuestions(
+		const mediumQuestionPaper: Question[] = getQuestions(
 			mediumQuestions,
 			Medium,
 			totalMarks
@@ -80,7 +80,7 @@ export const generateQuestionPaper = asyncHandler(
 
 		const mediumPaperLength: number = mediumQuestionPaper.length;
 
-		const hardQuestionPaper: Question[] = getRandomQuestions(
+		const hardQuestionPaper: Question[] = getQuestions(
 			hardQuestions,
 			Hard,
 			totalMarks
@@ -92,16 +92,6 @@ export const generateQuestionPaper = asyncHandler(
 			.concat(mediumQuestionPaper)
 			.concat(hardQuestionPaper);
 
-		//checking if the sum of questions in paper equals 100
-		const sum: number = questionPaper.reduce(
-			(sum, question) => sum + question.marks,
-			0
-		);
-		if (sum !== 100) {
-			return next(
-				new ApiError(500, "The sum of marks of these questions is not 100")
-			);
-		}
 
 		const data: Data = {
 			totalMarks: 100,
